@@ -1,0 +1,19 @@
+
+<img src="./assets/burger.png">
+<h1>Eat Da Burger</h1>
+
+<ul class="availBurgers">
+	{{#each burgers}}
+		{{#unless this.devoured}}
+			<li>
+				{{this.burger_name}}
+
+				<form action='burgers/update/{{this.id}}?_method-PUT' method = "POST",
+					<input type="hidden" name="devour" value="true">
+					<button type="submit">Devour</button>
+				</form>
+			</li>
+		{{/unless}}
+	{{/each}}
+</ul>
+
