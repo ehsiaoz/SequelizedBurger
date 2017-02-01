@@ -1,0 +1,61 @@
+body {
+  background-color: #FFCC00;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+#burger {
+  display: block;
+  margin: auto;
+}
+
+.create-update-form {
+  text-align: center;
+}
+
+#submit {
+  background-color: blue;
+  color: white;
+}
+
+li {
+  min-width: 250px;
+}
+
+.burgName {
+  display: inline;
+  min-width: 200px;
+}
+
+.devour {
+  display: inline;
+}
+
+.devourBtn {
+  color: white;
+  background-color: green;
+  position: relative;
+}
+
+p {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+#availBurg {
+  margin-left: 25%;
+  float: left;
+}
+
+
+#devBurg {
+  margin-right: 25%;
+  float: right;
+}

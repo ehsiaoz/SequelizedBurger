@@ -21,19 +21,10 @@ app.use(methodOverride('_method'));
 app.engine('hbs', exprhbs({extname: 'hbs', defaultLayout: 'main', layoutDir: __dirname + '/view/layouts/'}));
 app.set('view engine', 'hbs');
 
-//Set static route for javascript file
-app.use("/assets", express.static(path.join(__dirname, '/views/assets')));
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static(process.cwd() + "/public"));
 app.use('/', routes);
 
-// app.get('/', function(req, res) {
-//   res.render('index', {title: "Eat Da Burger"});
-// });
-
-// app.post('/', function(req, res) {
-//     var newBurger = req.body.newBurger;
-//     console.log(newBurger);
-//     res.render('index', {title: "Added the burger"});
-// });
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
